@@ -1,0 +1,7 @@
+# never EVER use CRLF, Windows
+* text eol=lf
+
+*.zip
+node_modules
+yarn.lock
+package-lock.json
