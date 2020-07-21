@@ -1,0 +1,30 @@
+{
+  "name": "@freight-trust/schemas",
+  "version": "0.2.0",
+  "description": "Schema Registry",
+  "keywords": [
+    "schema",
+    "registry"
+  ],
+  "author": "sam@freighttrust.com <sam@freighttrust.com>",
+  "homepage": "https://freighttrust.com/Schemas",
+  "license": "MPL-2.0",
+  "main": "lib/schemas.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freight-trust/customs.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/freight-trust/customs/issues"
+  }
+}
