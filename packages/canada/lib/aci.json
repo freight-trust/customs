@@ -1,0 +1,629 @@
+{
+  "aciHighwaySubmission": {
+    "acctId": "AB",
+    "userId": "string",
+    "messageId": "string",
+    "conveyance": [
+      {
+        "carrierCode": "ABCD",
+        "conveyanceReferenceNumber": "string",
+        "transponderIdentification": "string",
+        "messageFunctionCode": "string",
+        "amendmentCode": "string",
+        "portOfEntryCode": "string",
+        "expectedDateTimeOfArrival": "ABCDEFGHIJKL",
+        "expectedDateTimeOfArrivalTimeZone": "AB",
+        "person": [
+          {
+            "roleCode": "string",
+            "middleName": "string",
+            "lastName": "string",
+            "dateOfBirth": "ABCDEFGH",
+            "personalDocument": {
+              "documentType": "string",
+              "documentNumber": "string"
+            },
+            "emailAddress": "string",
+            "mobileNumber": "string"
+          },
+          {
+            "roleCode": "string",
+            "personalDocument": { "expiryDate": "ABCDEFGH" }
+          },
+          {
+            "firstName": "string",
+            "middleName": "string",
+            "lastName": "string",
+            "dateOfBirth": "ABCDEFGH",
+            "mobileNumber": "string"
+          },
+          {
+            "roleCode": "string",
+            "firstName": "string",
+            "lastName": "string",
+            "dateOfBirth": "ABCDEFGH",
+            "personalDocument": [
+              {
+                "documentNumber": "string",
+                "issuingCountryCode": "string"
+              },
+              {
+                "documentType": "string",
+                "documentNumber": "string",
+                "issuingCountryCode": "string"
+              }
+            ]
+          },
+          {
+            "roleCode": "string",
+            "firstName": "string",
+            "middleName": "string",
+            "lastName": "string",
+            "dateOfBirth": "ABCDEFGH",
+            "emailAddress": "string"
+          }
+        ],
+        "equipment": {
+          "isEmpty": "string",
+          "sealNumber": [
+            "string",
+            "string"
+          ],
+          "licensePlateNumber": "string",
+          "stateCode": "string",
+          "cargo": [
+            { "serviceTypeCode": "string" },
+            { "quantity": "string" },
+            {
+              "serviceTypeCode": "string",
+              "quantity": "string"
+            }
+          ]
+        },
+        "notificationParty": [
+          {
+            "name": "string",
+            "mobileNumber": [
+              "string",
+              "string",
+              "string"
+            ],
+            "emailAddress": "string",
+            "cargoControlNumber": "string"
+          },
+          {
+            "name": "string",
+            "mobileNumber": [
+              "string",
+              "string",
+              "string",
+              "string"
+            ],
+            "emailAddress": [
+              "string",
+              "string",
+              "string"
+            ],
+            "cargoControlNumber": "string"
+          },
+          {
+            "name": "string",
+            "mobileNumber": "string",
+            "notificationType": "string",
+            "cargoControlNumber": "string"
+          },
+          {
+            "name": "string",
+            "emailAddress": [
+              "string",
+              "string"
+            ],
+            "notificationType": "string",
+            "cargoControlNumber": "string"
+          }
+        ]
+      },
+      {
+        "carrierCode": "ABCD",
+        "conveyanceReferenceNumber": "string",
+        "transponderIdentification": "string",
+        "messageFunctionCode": "string",
+        "amendmentCode": "string",
+        "portOfEntryCode": "string",
+        "expectedDateTimeOfArrival": "ABCDEFGHIJKL",
+        "expectedDateTimeOfArrivalTimeZone": "AB",
+        "person": [
+          {
+            "roleCode": "string",
+            "firstName": "string",
+            "middleName": "string",
+            "personalDocument": [
+              {
+                "documentNumber": "string",
+                "issuingCountryCode": "string"
+              },
+              { "documentNumber": "string" }
+            ]
+          },
+          {
+            "roleCode": "string",
+            "firstName": "string",
+            "middleName": "string",
+            "lastName": "string",
+            "countryCode": "string",
+            "personalDocument": [
+              {
+                "documentType": "string",
+                "expiryDate": "ABCDEFGH"
+              },
+              { "issuingCountryCode": "string" },
+              {
+                "documentNumber": "string",
+                "issuingCountryCode": "string",
+                "expiryDate": "ABCDEFGH"
+              },
+              {
+                "documentType": "string",
+                "documentNumber": "string",
+                "issuingCountryCode": "string",
+                "expiryDate": "ABCDEFGH"
+              }
+            ]
+          },
+          {
+            "dateOfBirth": "ABCDEFGH",
+            "personalDocument": {
+              "documentType": "string",
+              "issuingCountryCode": "string",
+              "expiryDate": "ABCDEFGH"
+            },
+            "emailAddress": "string",
+            "mobileNumber": "string"
+          }
+        ],
+        "equipment": {
+          "sealNumber": [
+            "string",
+            "string",
+            "string"
+          ],
+          "licensePlateNumber": "string"
+        },
+        "notificationParty": [
+          {
+            "name": "string",
+            "mobileNumber": [
+              "string",
+              "string",
+              "string"
+            ],
+            "emailAddress": [
+              "string",
+              "string",
+              "string"
+            ],
+            "cargoControlNumber": "string"
+          },
+          {
+            "mobileNumber": "string",
+            "emailAddress": [
+              "string",
+              "string",
+              "string",
+              "string"
+            ],
+            "notificationType": "string"
+          },
+          {
+            "mobileNumber": [
+              "string",
+              "string",
+              "string"
+            ],
+            "emailAddress": "string",
+            "notificationType": "string"
+          }
+        ]
+      },
+      {
+        "carrierCode": "ABCD",
+        "conveyanceReferenceNumber": "string",
+        "transponderIdentification": "string",
+        "messageFunctionCode": "string",
+        "amendmentCode": "string",
+        "portOfEntryCode": "string",
+        "expectedDateTimeOfArrival": "ABCDEFGHIJKL",
+        "expectedDateTimeOfArrivalTimeZone": "AB",
+        "person": {
+          "roleCode": "string",
+          "firstName": "string",
+          "countryCode": "string",
+          "dateOfBirth": "ABCDEFGH",
+          "personalDocument": [
+            { "issuingCountryCode": "string" },
+            { "issuingCountryCode": "string" },
+            {
+              "documentNumber": "string",
+              "issuingCountryCode": "string"
+            }
+          ],
+          "emailAddress": "string"
+        },
+        "equipment": [
+          {
+            "equipmentTypeCode": "string",
+            "equipmentNumber": "string",
+            "isEmpty": "string",
+            "sealNumber": [
+              "string",
+              "string",
+              "string",
+              "string"
+            ],
+            "countryCode": "string",
+            "cargo": [
+              { "quantity": "string" },
+              {
+                "serviceTypeCode": "string",
+                "quantity": "string"
+              }
+            ]
+          },
+          {
+            "equipmentTypeCode": "string",
+            "equipmentNumber": "string",
+            "sealNumber": "string",
+            "licensePlateNumber": "string",
+            "stateCode": "string"
+          },
+          {
+            "equipmentInitial": "A",
+            "equipmentNumber": "string",
+            "sealNumber": [
+              "string",
+              "string",
+              "string"
+            ],
+            "licensePlateNumber": "string",
+            "countryCode": "string",
+            "stateCode": "string",
+            "cargo": [
+              { "serviceTypeCode": "string" },
+              {
+                "serviceTypeCode": "string",
+                "quantity": "string"
+              },
+              { "serviceTypeCode": "string" }
+            ]
+          },
+          {
+            "isEmpty": "string",
+            "sealNumber": [
+              "string",
+              "string",
+              "string",
+              "string"
+            ],
+            "licensePlateNumber": "string",
+            "stateCode": "string"
+          },
+          {
+            "equipmentTypeCode": "string",
+            "equipmentInitial": "ABC",
+            "equipmentNumber": "string",
+            "isEmpty": "string",
+            "sealNumber": [
+              "string",
+              "string"
+            ],
+            "licensePlateNumber": "string",
+            "cargo": [
+              {
+                "serviceTypeCode": "string",
+                "quantity": "string"
+              },
+              { "serviceTypeCode": "string" },
+              {
+                "serviceTypeCode": "string",
+                "quantity": "string"
+              }
+            ]
+          }
+        ],
+        "notificationParty": [
+          {
+            "name": "string",
+            "mobileNumber": "string"
+          },
+          {
+            "name": "string",
+            "mobileNumber": "string",
+            "notificationType": "string"
+          }
+        ]
+      },
+      {
+        "carrierCode": "ABCD",
+        "conveyanceReferenceNumber": "string",
+        "transponderIdentification": "string",
+        "messageFunctionCode": "string",
+        "amendmentCode": "string",
+        "portOfEntryCode": "string",
+        "expectedDateTimeOfArrival": "ABCDEFGHIJKL",
+        "expectedDateTimeOfArrivalTimeZone": "AB",
+        "person": [
+          {
+            "middleName": "string",
+            "lastName": "string",
+            "countryCode": "string",
+            "personalDocument": [
+              {
+                "documentType": "string",
+                "documentNumber": "string",
+                "issuingCountryCode": "string"
+              },
+              {
+                "documentType": "string",
+                "documentNumber": "string",
+                "issuingCountryCode": "string"
+              },
+              { "expiryDate": "ABCDEFGH" }
+            ],
+            "emailAddress": "string",
+            "mobileNumber": "string"
+          },
+          {
+            "lastName": "string",
+            "dateOfBirth": "ABCDEFGH",
+            "personalDocument": [
+              { "issuingCountryCode": "string" },
+              {
+                "documentType": "string",
+                "documentNumber": "string",
+                "issuingCountryCode": "string",
+                "expiryDate": "ABCDEFGH"
+              },
+              {
+                "documentType": "string",
+                "documentNumber": "string",
+                "issuingCountryCode": "string"
+              }
+            ],
+            "mobileNumber": "string"
+          },
+          {
+            "roleCode": "string",
+            "middleName": "string",
+            "personalDocument": {
+              "documentType": "string",
+              "issuingCountryCode": "string"
+            }
+          },
+          {
+            "roleCode": "string",
+            "firstName": "string",
+            "middleName": "string",
+            "lastName": "string",
+            "countryCode": "string",
+            "personalDocument": {
+              "documentNumber": "string",
+              "expiryDate": "ABCDEFGH"
+            }
+          },
+          {
+            "roleCode": "string",
+            "firstName": "string",
+            "dateOfBirth": "ABCDEFGH",
+            "personalDocument": [
+              { "documentNumber": "string" },
+              { "documentType": "string" }
+            ],
+            "emailAddress": "string",
+            "mobileNumber": "string"
+          }
+        ],
+        "equipment": [
+          {
+            "equipmentTypeCode": "string",
+            "equipmentInitial": "ABC",
+            "sealNumber": [
+              "string",
+              "string",
+              "string"
+            ],
+            "licensePlateNumber": "string",
+            "stateCode": "string",
+            "cargo": [
+              { "serviceTypeCode": "string" },
+              { "quantity": "string" },
+              { "quantity": "string" }
+            ]
+          },
+          {
+            "licensePlateNumber": "string",
+            "countryCode": "string",
+            "stateCode": "string"
+          }
+        ],
+        "notificationParty": [
+          {
+            "mobileNumber": [
+              "string",
+              "string"
+            ],
+            "emailAddress": "string",
+            "notificationType": "string",
+            "cargoControlNumber": "string"
+          },
+          {
+            "mobileNumber": [
+              "string",
+              "string",
+              "string",
+              "string"
+            ],
+            "cargoControlNumber": "string"
+          },
+          {
+            "name": "string",
+            "mobileNumber": [
+              "string",
+              "string"
+            ]
+          }
+        ]
+      }
+    ],
+    "cargo": {
+      "cargoType": "string",
+      "carrierCode": "ABCD",
+      "cargoControlNumber": "string",
+      "equipmentNumber": "string",
+      "messageFunctionCode": "string",
+      "amendmentCode": "string",
+      "uniqueConsignmentReferenceNumber": "string",
+      "firstPortOfArrival": "string",
+      "expectedDateTimeOfArrival": "ABCDEFGHIJKL",
+      "expectedDateTimeOfArrivalTimeZone": "AB",
+      "portMovement": [
+        {
+          "functionCode": "string",
+          "location": "string",
+          "countryCode": "string",
+          "subLocationCode": "string"
+        },
+        {
+          "location": "string",
+          "stateCode": "string"
+        },
+        { "subLocationCode": "string" }
+      ],
+      "isConsolidated": "string",
+      "administrativeContact": {
+        "name": "string",
+        "communicationType": "string",
+        "communicationNumber": "string"
+      },
+      "specialInstruction": "string",
+      "tradeParty": [
+        {
+          "partyTypeCode": "string",
+          "businessNumber": "ABCDEFGHIJKLMNO",
+          "name": "string",
+          "address": "string",
+          "city": "string",
+          "countryCode": "string",
+          "postalCode": "string"
+        },
+        {
+          "partyTypeCode": "string",
+          "name": "string",
+          "address": "string",
+          "stateCode": "string"
+        },
+        {
+          "partyTypeCode": "string",
+          "businessNumber": "ABCDEFGHIJKLMNO",
+          "name": "string",
+          "address": "string",
+          "postalCode": "string",
+          "stateCode": "string",
+          "administrativeContact": {
+            "function": "string",
+            "communicationType": "string"
+          }
+        },
+        {
+          "partyTypeCode": "string",
+          "businessNumber": "ABCDEFGHIJKLMNO",
+          "address": "string",
+          "city": "string",
+          "postalCode": "string",
+          "stateCode": "string"
+        },
+        {
+          "partyTypeCode": "string",
+          "address": "string",
+          "countryCode": "string",
+          "postalCode": "string"
+        }
+      ],
+      "commodity": [
+        {
+          "quantity": "string",
+          "marksAndNumbers": "string",
+          "harmonizedSystemCode": "string",
+          "weightUnitOfMeasurement": "string",
+          "hazardousMaterial": [
+            { "hazardousMaterialDescription": "string" },
+            { "hazardousMaterialCode": "string" }
+          ]
+        },
+        {
+          "description": "string",
+          "harmonizedSystemCode": "string",
+          "weightUnitOfMeasurement": "string"
+        },
+        {
+          "description": "string",
+          "harmonizedSystemCode": "string",
+          "weight": "string",
+          "hazardousMaterial": [
+            { "hazardousMaterialDescription": "string" },
+            { "hazardousMaterialCode": "string" },
+            { "hazardousMaterialDescription": "string" }
+          ]
+        },
+        {
+          "description": "string",
+          "marksAndNumbers": "string",
+          "weight": "string",
+          "weightUnitOfMeasurement": "string",
+          "packageUnitOfMeasurement": "string",
+          "hazardousMaterial": [
+            { "hazardousMaterialDescription": "string" },
+            {
+              "hazardousMaterialCode": "string",
+              "hazardousMaterialDescription": "string"
+            },
+            {
+              
+            }
+          ]
+        }
+      ],
+      "notificationParty": {
+        "mobileNumber": [
+          "string",
+          "string",
+          "string"
+        ],
+        "emailAddress": "string",
+        "notificationType": "string"
+      }
+    },
+    "statusQuery": {
+      "cargoControlNumber": "string",
+      "transactionNumber": "string"
+    },
+    "arrivalCertification": [
+      {
+        "cargoControlNumber": "string",
+        "arrivalDateTime": "ABCDEFGHIJKL",
+        "portOfClearance": "string",
+        "warehouseCode": "string",
+        "businessNumber": "ABCDEFGHIJKLMNO",
+        "messageFunctionCode": "string"
+      },
+      ,
+      {
+        "cargoControlNumber": "string",
+        "arrivalDateTime": "ABCDEFGHIJKL",
+        "portOfClearance": "string",
+        "warehouseCode": "string",
+        "businessNumber": "ABCDEFGHIJKLMNO",
+        "messageFunctionCode": "string"
+      }
+    ]
+  }
+}
