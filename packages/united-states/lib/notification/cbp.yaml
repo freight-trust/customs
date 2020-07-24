@@ -1,0 +1,33 @@
+---
+documentEnvironment
+metadata:
+  name: CBP Notification
+  labels:
+    purpose: 
+spec:
+  united-states-customs:
+  - name: not-quite-power-of-attorney
+    ref-code: urn:customs:usa:$value
+    env:
+    - name: OPS_PHONE
+      value: 
+    - name: OPS_EMAIL
+      value: 
+    - name: TECHNICAL_CONTACT
+      value: 
+    - name: TRUCKS_CROSSING
+      value: 
+    - name: CUSTODIAL_BOND
+      value: 
+    - name: CROSSING_PORT
+      value: 
+    - name: CBP_AGENT
+      value: 
+    - name: NUM_CROSSING_PER_MONTH
+      value: 
+    - name: CBP_AGENT
+      value: 
+    - name: TMS_PROVIDER
+      value: 
+    - name: CROSSING_PORT
+      value: 
