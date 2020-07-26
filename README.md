@@ -14,7 +14,9 @@ Trades & Orders -->
 <img alt="Open Source License" src="https://img.shields.io/github/license/freight-trust/releases?style=social">
 <!-- Badges End -->
 
+> Trades mean any transaction occuring between `trading partners` within a `trading channel` 
 
+> The `exchange` is also referenced as the `combinator` - it is the protocol implementation that interfaces directly with different `message queue brokers` hence the name `exchange`
 
 # Submission of Trades.
 
