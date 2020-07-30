@@ -1,0 +1,31 @@
+{
+  "name": "@fr8/uscbp",
+  "version": "0.1.0",
+  "description": "United States CBP",
+  "main": "src/gov/dhs/cbp/dis/CBPRequest.java",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freight-trust/customs.git"
+  },
+  "keywords": [
+    "customs",
+    "cbp",
+    "supply",
+    "chain",
+    "logistics",
+    "border",
+    "tariffs",
+    "compliance",
+    "trade",
+    "blockchain"
+  ],
+  "author": "SEE LICENSE",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/freight-trust/customs/issues"
+  },
+  "homepage": "https://github.com/freight-trust/customs#readme"
+}
