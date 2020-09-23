@@ -1,0 +1,681 @@
+{
+    "xs:schema": {
+        "@targetNamespace": "http://www.edi.com.au/EnterpriseService/", 
+        "@xmlns": "http://www.edi.com.au/EnterpriseService/", 
+        "@xmlns:xs": "http://www.w3.org/2001/XMLSchema", 
+        "@elementFormDefault": "qualified", 
+        "@attributeFormDefault": "unqualified", 
+        "xs:include": [
+            {
+                "@schemaLocation": "Elements.xsd"
+            }, 
+            {
+                "@schemaLocation": "Invoice.xsd"
+            }, 
+            {
+                "@schemaLocation": "Order.xsd"
+            }, 
+            {
+                "@schemaLocation": "Event.xsd"
+            }, 
+            {
+                "@schemaLocation": "FinancialInvoice.xsd"
+            }
+        ], 
+        "xs:complexType": [
+            {
+                "@name": "ShipmentIdentifier", 
+                "xs:simpleContent": {
+                    "xs:extension": {
+                        "@base": "xs:string", 
+                        "xs:attribute": [
+                            {
+                                "@name": "ShipmentIdentifierType", 
+                                "@type": "ShipmentIdentifierType", 
+                                "@use": "required"
+                            }, 
+                            {
+                                "@name": "Masterbill", 
+                                "@type": "xs:string", 
+                                "@use": "optional"
+                            }
+                        ]
+                    }
+                }
+            }, 
+            {
+                "@name": "Shipment", 
+                "xs:sequence": {
+                    "xs:element": [
+                        {
+                            "@name": "Events", 
+                            "@type": "Events", 
+                            "@minOccurs": "0"
+                        }, 
+                        {
+                            "@name": "Notes", 
+                            "@type": "Notes", 
+                            "@minOccurs": "0"
+                        }, 
+                        {
+                            "@name": "ShipmentIdentifier", 
+                            "@type": "ShipmentIdentifier", 
+                            "@minOccurs": "0", 
+                            "@maxOccurs": "unbounded", 
+                            "xs:annotation": {
+                                "xs:documentation": "Unique identifier of the shipment"
+                            }
+                        }, 
+                        {
+                            "@name": "ShipmentDetails", 
+                            "@minOccurs": "0", 
+                            "xs:complexType": {
+                                "xs:sequence": {
+                                    "xs:element": [
+                                        {
+                                            "@name": "DateCreated", 
+                                            "@type": "xs:dateTime", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "TransportMode", 
+                                            "@type": "TransportMode"
+                                        }, 
+                                        {
+                                            "@name": "PortOfOrigin", 
+                                            "@type": "Movement", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "PortofDestination", 
+                                            "@type": "Movement", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "Consignee", 
+                                            "@type": "Organisation", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "Consignor", 
+                                            "@type": "Organisation", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "ShipmentStatus", 
+                                            "@type": "xs:NMTOKEN", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "PackingMode", 
+                                            "@type": "ContainerMode", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "TotalInnerPacksQty", 
+                                            "@type": "DimensionValue", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "TotalOuterPacksQty", 
+                                            "@type": "DimensionValue", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "Weight", 
+                                            "@type": "DimensionValue", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "Volume", 
+                                            "@type": "DimensionValue", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "GoodsValue", 
+                                            "@type": "FinancialValue", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "InsuranceValue", 
+                                            "@type": "FinancialValue", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "GoodsDescription", 
+                                            "@type": "xs:string", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "ChargeableWeight", 
+                                            "@type": "DimensionValue", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "FreightRate", 
+                                            "@type": "FinancialValue", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "MarksAndNumbers", 
+                                            "@type": "xs:string", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "ServiceLevel", 
+                                            "@minOccurs": "0", 
+                                            "xs:simpleType": {
+                                                "xs:restriction": {
+                                                    "@base": "xs:NMTOKEN", 
+                                                    "xs:minLength": {
+                                                        "@value": "1"
+                                                    }, 
+                                                    "xs:maxLength": {
+                                                        "@value": "3"
+                                                    }
+                                                }
+                                            }
+                                        }, 
+                                        {
+                                            "@name": "Incoterm", 
+                                            "@minOccurs": "0", 
+                                            "xs:simpleType": {
+                                                "xs:restriction": {
+                                                    "@base": "INCOTERM", 
+                                                    "xs:length": {
+                                                        "@value": "3"
+                                                    }
+                                                }
+                                            }
+                                        }, 
+                                        {
+                                            "@name": "ReleaseType", 
+                                            "@type": "ReleaseType", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "NotifyParty", 
+                                            "@type": "ContactReference", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "OwnerReference", 
+                                            "@type": "xs:NMTOKEN", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "OrderReferences", 
+                                            "@minOccurs": "0", 
+                                            "xs:complexType": {
+                                                "xs:sequence": {
+                                                    "xs:element": {
+                                                        "@name": "OrderReference", 
+                                                        "@type": "xs:string", 
+                                                        "@maxOccurs": "unbounded"
+                                                    }
+                                                }
+                                            }
+                                        }, 
+                                        {
+                                            "@name": "Packages", 
+                                            "@minOccurs": "0", 
+                                            "xs:complexType": {
+                                                "xs:sequence": {
+                                                    "xs:element": {
+                                                        "@name": "Package", 
+                                                        "@type": "Package", 
+                                                        "@maxOccurs": "unbounded"
+                                                    }
+                                                }
+                                            }
+                                        }, 
+                                        {
+                                            "@name": "ImportBroker", 
+                                            "@type": "Organisation", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "ExportBroker", 
+                                            "@type": "Organisation", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "AgentReference", 
+                                            "@type": "xs:string", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "BookingReference", 
+                                            "@type": "xs:string", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "OnForwardTo", 
+                                            "@type": "xs:string", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "OnForwardToETA", 
+                                            "@type": "xs:dateTime", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "HBLIssueDate", 
+                                            "@type": "xs:dateTime", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "HBLContainerMode", 
+                                            "@type": "xs:string", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "ShippedOnBoardDate", 
+                                            "@type": "xs:dateTime", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "ShippedOnBoardType", 
+                                            "@type": "ShippedOnBoardType", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "NoOriginalBills", 
+                                            "@type": "xs:string", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "NoCopyBills", 
+                                            "@type": "xs:string", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "CustomsEntryNumbers", 
+                                            "@type": "CustomsEntryNumbers", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "CustomsEntries", 
+                                            "@type": "CustomsEntries", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "Deliver", 
+                                            "@minOccurs": "0", 
+                                            "xs:complexType": {
+                                                "xs:sequence": {
+                                                    "xs:element": [
+                                                        {
+                                                            "@name": "DeliveryFrom", 
+                                                            "@type": "xs:dateTime", 
+                                                            "@minOccurs": "0"
+                                                        }, 
+                                                        {
+                                                            "@name": "DeliveryRequiredBy", 
+                                                            "@type": "xs:dateTime", 
+                                                            "@minOccurs": "0"
+                                                        }, 
+                                                        {
+                                                            "@name": "CartageAdvised", 
+                                                            "@type": "xs:dateTime", 
+                                                            "@minOccurs": "0"
+                                                        }, 
+                                                        {
+                                                            "@name": "GoodsDelivered", 
+                                                            "@type": "xs:dateTime", 
+                                                            "@minOccurs": "0"
+                                                        }, 
+                                                        {
+                                                            "@name": "DeliveryAgent", 
+                                                            "@type": "Organisation", 
+                                                            "@minOccurs": "0"
+                                                        }, 
+                                                        {
+                                                            "@name": "Address", 
+                                                            "@type": "OrgAddress", 
+                                                            "@minOccurs": "0", 
+                                                            "xs:annotation": {
+                                                                "xs:documentation": "Address for delivery of goods"
+                                                            }
+                                                        }, 
+                                                        {
+                                                            "@name": "CartageCompany", 
+                                                            "@type": "Organisation", 
+                                                            "@minOccurs": "0"
+                                                        }, 
+                                                        {
+                                                            "@name": "CFS", 
+                                                            "@type": "CFSAddress", 
+                                                            "@minOccurs": "0"
+                                                        }, 
+                                                        {
+                                                            "@name": "DeliveryLegs", 
+                                                            "@minOccurs": "0", 
+                                                            "xs:complexType": {
+                                                                "xs:sequence": {
+                                                                    "xs:element": {
+                                                                        "@name": "DeliveryLeg", 
+                                                                        "@type": "ContainerLeg", 
+                                                                        "@maxOccurs": "unbounded"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }, 
+                                        {
+                                            "@name": "Pickup", 
+                                            "@minOccurs": "0", 
+                                            "xs:complexType": {
+                                                "xs:sequence": {
+                                                    "xs:element": [
+                                                        {
+                                                            "@name": "PickupFrom", 
+                                                            "@type": "xs:dateTime", 
+                                                            "@minOccurs": "0"
+                                                        }, 
+                                                        {
+                                                            "@name": "PickupRequiredBy", 
+                                                            "@type": "xs:dateTime", 
+                                                            "@minOccurs": "0"
+                                                        }, 
+                                                        {
+                                                            "@name": "CartageAdvised", 
+                                                            "@type": "xs:dateTime", 
+                                                            "@minOccurs": "0"
+                                                        }, 
+                                                        {
+                                                            "@name": "GoodsPickup", 
+                                                            "@type": "xs:dateTime", 
+                                                            "@minOccurs": "0"
+                                                        }, 
+                                                        {
+                                                            "@name": "DateOfReceipt", 
+                                                            "@type": "xs:dateTime", 
+                                                            "@minOccurs": "0"
+                                                        }, 
+                                                        {
+                                                            "@name": "Address", 
+                                                            "@type": "OrgAddress", 
+                                                            "@minOccurs": "0", 
+                                                            "xs:annotation": {
+                                                                "xs:documentation": "Address for pickup of goods"
+                                                            }
+                                                        }, 
+                                                        {
+                                                            "@name": "CartageCompany", 
+                                                            "@type": "Organisation", 
+                                                            "@minOccurs": "0"
+                                                        }, 
+                                                        {
+                                                            "@name": "CFS", 
+                                                            "@type": "CFSAddress", 
+                                                            "@minOccurs": "0"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }, 
+                                        {
+                                            "@name": "Custom", 
+                                            "@minOccurs": "0", 
+                                            "xs:complexType": {
+                                                "xs:sequence": {
+                                                    "xs:element": [
+                                                        {
+                                                            "@name": "CustomAttribute1", 
+                                                            "@type": "xs:string", 
+                                                            "@minOccurs": "0"
+                                                        }, 
+                                                        {
+                                                            "@name": "CustomAttribute2", 
+                                                            "@type": "xs:string", 
+                                                            "@minOccurs": "0"
+                                                        }, 
+                                                        {
+                                                            "@name": "Date1", 
+                                                            "@type": "xs:dateTime", 
+                                                            "@minOccurs": "0"
+                                                        }, 
+                                                        {
+                                                            "@name": "Date2", 
+                                                            "@type": "xs:dateTime", 
+                                                            "@minOccurs": "0"
+                                                        }, 
+                                                        {
+                                                            "@name": "Decimal1", 
+                                                            "@type": "xs:decimal", 
+                                                            "@minOccurs": "0"
+                                                        }, 
+                                                        {
+                                                            "@name": "Decimal2", 
+                                                            "@type": "xs:decimal", 
+                                                            "@minOccurs": "0"
+                                                        }, 
+                                                        {
+                                                            "@name": "Flag1", 
+                                                            "@type": "TrueFalse", 
+                                                            "@minOccurs": "0"
+                                                        }, 
+                                                        {
+                                                            "@name": "Flag2", 
+                                                            "@type": "TrueFalse", 
+                                                            "@minOccurs": "0"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }, 
+                                        {
+                                            "@name": "TransportPlan", 
+                                            "@minOccurs": "0", 
+                                            "xs:complexType": {
+                                                "xs:sequence": {
+                                                    "xs:element": {
+                                                        "@name": "PlannedLeg", 
+                                                        "@type": "PlannedLeg", 
+                                                        "@maxOccurs": "unbounded"
+                                                    }
+                                                }
+                                            }
+                                        }, 
+                                        {
+                                            "@name": "DocAddresses", 
+                                            "@type": "DocAddresses", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "ShipmentType", 
+                                            "@type": "ShipmentType", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "InnerPackages", 
+                                            "@minOccurs": "0", 
+                                            "xs:complexType": {
+                                                "xs:sequence": {
+                                                    "xs:element": {
+                                                        "@name": "InnerPackage", 
+                                                        "@type": "InnerPackage", 
+                                                        "@maxOccurs": "unbounded"
+                                                    }
+                                                }
+                                            }
+                                        }, 
+                                        {
+                                            "@name": "DeclarationStyle", 
+                                            "@type": "xs:string", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "SalesRep", 
+                                            "@type": "xs:string", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "LocalClient", 
+                                            "@type": "Organisation", 
+                                            "@minOccurs": "0"
+                                        }, 
+                                        {
+                                            "@name": "TEU", 
+                                            "@type": "xs:decimal", 
+                                            "@minOccurs": "0"
+                                        }
+                                    ]
+                                }
+                            }
+                        }, 
+                        {
+                            "@name": "Invoices", 
+                            "@minOccurs": "0", 
+                            "xs:complexType": {
+                                "xs:sequence": {
+                                    "xs:element": {
+                                        "@name": "InvoiceHeader", 
+                                        "@type": "InvoiceHeader", 
+                                        "@maxOccurs": "unbounded"
+                                    }
+                                }
+                            }
+                        }, 
+                        {
+                            "@name": "Declaration", 
+                            "@type": "Declaration", 
+                            "@minOccurs": "0"
+                        }, 
+                        {
+                            "@name": "Orders", 
+                            "@minOccurs": "0", 
+                            "xs:complexType": {
+                                "xs:sequence": {
+                                    "xs:element": {
+                                        "@name": "Order", 
+                                        "@type": "Order", 
+                                        "@maxOccurs": "unbounded"
+                                    }
+                                }
+                            }
+                        }, 
+                        {
+                            "@name": "Documents", 
+                            "@type": "Documents", 
+                            "@minOccurs": "0"
+                        }, 
+                        {
+                            "@name": "ARInvoices", 
+                            "@minOccurs": "0", 
+                            "xs:complexType": {
+                                "xs:sequence": {
+                                    "xs:element": {
+                                        "@name": "TxnHeader", 
+                                        "@type": "TxnHeader", 
+                                        "@maxOccurs": "unbounded"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            }, 
+            {
+                "@name": "Shipments", 
+                "xs:sequence": {
+                    "xs:element": {
+                        "@name": "Shipment", 
+                        "@type": "Shipment", 
+                        "@maxOccurs": "unbounded"
+                    }
+                }
+            }, 
+            {
+                "@name": "ShipmentsWithVersion", 
+                "xs:complexContent": {
+                    "xs:extension": {
+                        "@base": "Shipments", 
+                        "xs:attribute": {
+                            "@name": "Version", 
+                            "@type": "Version", 
+                            "@use": "optional"
+                        }
+                    }
+                }
+            }, 
+            {
+                "@name": "TransportPlan", 
+                "xs:sequence": {
+                    "xs:element": {
+                        "@name": "PlannedLeg", 
+                        "@type": "PlannedLeg", 
+                        "@maxOccurs": "unbounded"
+                    }
+                }
+            }, 
+            {
+                "@name": "CFSAddress", 
+                "xs:sequence": {
+                    "xs:element": [
+                        {
+                            "@name": "Address", 
+                            "@type": "AddressReference", 
+                            "@minOccurs": "0"
+                        }, 
+                        {
+                            "@name": "Location", 
+                            "@type": "xs:string", 
+                            "@minOccurs": "0"
+                        }
+                    ]
+                }
+            }
+        ], 
+        "xs:element": {
+            "@name": "Shipments", 
+            "@type": "ShipmentsWithVersion"
+        }, 
+        "xs:simpleType": [
+            {
+                "@name": "ShipmentIdentifierType", 
+                "xs:restriction": {
+                    "@base": "xs:NMTOKEN", 
+                    "xs:enumeration": [
+                        {
+                            "@value": "Housebill"
+                        }, 
+                        {
+                            "@value": "CoLoadMaster"
+                        }, 
+                        {
+                            "@value": "PreadviceIdentifier"
+                        }, 
+                        {
+                            "@value": "Other"
+                        }
+                    ]
+                }
+            }, 
+            {
+                "@name": "ShippedOnBoardType", 
+                "xs:restriction": {
+                    "@base": "xs:NMTOKEN", 
+                    "xs:enumeration": [
+                        {
+                            "@value": "SHP"
+                        }, 
+                        {
+                            "@value": "CLN"
+                        }, 
+                        {
+                            "@value": "LDN"
+                        }, 
+                        {
+                            "@value": "RFS"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
