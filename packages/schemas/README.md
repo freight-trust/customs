@@ -1,11 +1,3 @@
 # `schemas`
 
-> TODO: description
-
-## Usage
-
-```
-const schemas = require('schemas');
-
-// TODO: DEMONSTRATE API
-```
+>  this package has moved to: https://github.com/freight-trust/global
